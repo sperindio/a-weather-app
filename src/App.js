@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import SearchForm from "./Components/Search-form.component/search-form.component";
+import Header from "./Components/Header/header.component";
 import "./App.css";
 
 function App() {
@@ -18,11 +19,14 @@ function App() {
   };
 
   return (
-    <SearchForm
-      searchText={searchText}
-      handleChange={handleChange}
-      handleSubmit={handleSubmit}
-    />
+    <React.Fragment>
+      <Header />
+      <SearchForm
+        searchText={searchText}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+      />
+    </React.Fragment>
   );
 }
 

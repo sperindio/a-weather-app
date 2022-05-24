@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  Container,
-  SearchBar,
-  SearchButton,
-  OuterSearchBar,
-} from "./search.form.styles";
+import { Container, SearchBar, SearchButton } from "./search.form.styles";
 
 const SearchForm = ({ searchText, handleChange, handleSubmit }) => {
   return (
