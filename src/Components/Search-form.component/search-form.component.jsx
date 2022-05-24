@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   Container,
   SearchBar,
@@ -6,21 +6,18 @@ import {
   OuterSearchBar,
 } from "./search.form.styles";
 
-const SearchForm = (props) => {
-  const [searchText, setSearchText] = useState("");
-
+const SearchForm = ({ searchText, handleChange, handleSubmit }) => {
   return (
     <Container>
-      <OuterSearchBar>
-        <form>
-          <SearchBar
-            type="text"
-            value={searchText}
-            onChange={(e) => setSearchText(e.target.value)}
-          ></SearchBar>
-        </form>
-        <SearchButton>Search Now</SearchButton>
-      </OuterSearchBar>
+      <form onSubmit={handleSubmit}>
+        <SearchBar
+          type="text"
+          value={searchText}
+          placeholder="Where?"
+          onChange={handleChange}
+        />
+        <SearchButton value="Search Now" type="submit" />
+      </form>
     </Container>
   );
 };
