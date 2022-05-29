@@ -5,7 +5,6 @@ export const Root = styled.body`
 `;
 
 export const Container = styled.div`
-  font-family: Monospace, Arial, Helvetica, sans-serif;
   position: fixed;
   text-align: center;
   top: 50%;
@@ -15,10 +14,9 @@ export const Container = styled.div`
 `;
 
 export const SearchBar = styled.input`
-  font-family: Arial, Helvetica, sans-serif;
   background: rgba(0, 0, 0, 0.2);
 
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 0.5px solid rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   border-bottom: 1px solid white;
   height: 35px;

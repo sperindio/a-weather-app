@@ -12,7 +12,7 @@ export const FooterStyle = styled.div`
     rgba(0, 0, 0, 0.4) 0%,
     rgba(0, 0, 0, 0) 100%
   );
-  font-family: Arial, Helvetica, sans-serif;
+
   color: white;
   position: fixed;
   bottom: 0px;
