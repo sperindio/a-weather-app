@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import SearchForm from "./Components/Search-form.component/search-form.component";
-import { Root } from "./Components/Search-form.component/search.form.styles";
 import Header from "./Components/Header/header.component";
 import Footer from "./Components/Footer/footer.component";
 import "./App.css";

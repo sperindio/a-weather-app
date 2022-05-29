@@ -1,9 +1,5 @@
 import styled from "styled-components";
 
-export const Root = styled.body`
-  background-image: url(/Assets/images/bgmain.jpg);
-`;
-
 export const Container = styled.div`
   position: fixed;
   text-align: center;
@@ -15,7 +11,6 @@ export const Container = styled.div`
 
 export const SearchBar = styled.input`
   background: rgba(0, 0, 0, 0.2);
-
   border: 0.5px solid rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   border-bottom: 1px solid white;
