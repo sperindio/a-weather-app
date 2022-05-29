@@ -23,13 +23,11 @@ function App() {
   return (
     <React.Fragment>
       <Header />
-      <Root>
-        <SearchForm
-          searchText={searchText}
-          handleChange={handleChange}
-          handleSubmit={handleSubmit}
-        />
-      </Root>
+      <SearchForm
+        searchText={searchText}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+      />
       <Footer />
     </React.Fragment>
   );
