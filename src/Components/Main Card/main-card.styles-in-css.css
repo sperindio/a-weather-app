@@ -1,0 +1,52 @@
+.outer-container {
+    margin: auto;
+  }
+  
+  .card-container {
+    margin: 30px auto;
+    width: 15%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid white;
+    border-radius: 35px;
+    box-shadow: 0px 0px 10px white;
+  }
+  
+  .inner-card-stacking {
+    margin: auto;
+    text-align: center;
+    color: white;
+  }
+  
+  .max-min {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  h5 {
+    font-size: 32px;
+  }
+  
+  h3 {
+    font-size: 24px;
+  }
+  
+  #temp {
+    font-size: 24px;
+  }
+  
+  .max-min p {
+    font-size: 16px;
+    margin: 10px 10px;
+  }
+
+  .max-min p span {
+      margin-right: 5px;
+  }
+  
+  .icon {
+    width: 70%
+  }
