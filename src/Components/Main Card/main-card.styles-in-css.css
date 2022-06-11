@@ -20,6 +20,10 @@
     color: white;
   }
   
+  .inner-card-stacking * {
+      margin: 15px auto;
+  }
+
   .max-min {
     display: flex;
     align-items: center;
@@ -48,5 +52,5 @@
   }
   
   .icon {
-    width: 70%
+    width: 50%
   }

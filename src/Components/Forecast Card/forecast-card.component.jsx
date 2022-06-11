@@ -4,11 +4,11 @@ import {
   CardContainer,
   InnerCardStacking,
   MaxMinStyles,
-} from "./main-card.styles";
+} from "../Main Card/main-card.styles";
 import "./main-card.styles-in-css.css";
 import { ReactComponent as WeatherIcon } from "../../Assets/icons/01d.svg";
 
-const MainCard = ({ name, main, weather }) => {
+const ForecastCard = ({ daily }) => {
   return (
     <OuterCardContainer>
       <CardContainer>
@@ -32,4 +32,4 @@ const MainCard = ({ name, main, weather }) => {
   );
 };
 
-export default MainCard;
+export default ForecastCard;
