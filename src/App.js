@@ -4,12 +4,13 @@ import Header from "./Components/Header/header.component";
 import Footer from "./Components/Footer/footer.component";
 import { OFFLINE_DATA, DAILY_DATA } from "./Assets/offline-data";
 import MainCard from "./Components/Main Card/main-card.component";
+import ForecastCard from "./Components/Forecast Card/forecast-card.component";
 import "./App.css";
 
 function App() {
   const [searchText, setSearchText] = useState("");
-  const [weatherData, setWeatherData] = useState(OFFLINE_DATA);
   const [dailyData, setDailyData] = useState(DAILY_DATA);
+  const [weatherData, setWeatherData] = useState(OFFLINE_DATA);
 
   const handleChange = (e) => {
     setSearchText(e.target.value);
@@ -20,7 +21,6 @@ function App() {
     console.log("This is the final state" + searchText);
     alert("A name was submitted: " + searchText);
     setSearchText("");
-    console.log(weatherData);
     event.preventDefault();
   };
 
@@ -28,9 +28,13 @@ function App() {
     <React.Fragment>
       <Header />
       {weatherData ? (
-        <MainCard {...weatherData} />
+        <React.Fragment>
+          {console.log(dailyData)}
+          <MainCard {...weatherData} />
+          <ForecastCard {...dailyData} />
+        </React.Fragment>
       ) : (
-        //{dailyData.map((daydata.weather.daily) => <MainCard {...daydata} />)}
+        //{dailyData.map((daydata.weather.daily.lenght()) => <MainCard {...daydata} />)}
         <SearchForm
           searchText={searchText}
           handleChange={handleChange}
