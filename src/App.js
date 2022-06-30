@@ -5,6 +5,7 @@ import Footer from "./Components/Footer/footer.component";
 import { OFFLINE_DATA, DAILY_DATA } from "./Assets/offline-data";
 import MainCard from "./Components/Main Card/main-card.component";
 import ForecastCard from "./Components/Forecast Card/forecast-card.component";
+import WeatherPage from "./Pages/WeatherPage";
 import "./App.css";
 
 function App() {
@@ -28,11 +29,7 @@ function App() {
     <React.Fragment>
       <Header />
       {weatherData ? (
-        <React.Fragment>
-          {console.log(dailyData)}
-          <MainCard {...weatherData} />
-          <ForecastCard {...dailyData} />
-        </React.Fragment>
+        <WeatherPage weatherData={weatherData} dailyData={dailyData} />
       ) : (
         //{dailyData.map((daydata.weather.daily.lenght()) => <MainCard {...daydata} />)}
         <SearchForm

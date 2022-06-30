@@ -1,34 +1,32 @@
 import React from "react";
 import {
   OuterCardContainer,
-  CardContainer,
   InnerCardStacking,
   MaxMinStyles,
 } from "../Main Card/main-card.styles";
+import { ForecastCardStyle } from "./forecast-card.styles";
 import "../Main Card/main-card.styles-in-css.css";
 import { ReactComponent as WeatherIcon } from "../../Assets/icons/01d.svg";
 
-const ForecastCard = ({ daily }) => {
+const ForecastCard = ({ temp, weather }) => {
   return (
-    <OuterCardContainer>
-      <CardContainer>
+      <ForecastCardStyle>
         <InnerCardStacking>
           <h3>Giorno</h3>
           <WeatherIcon className="icon" />
-          <p id="temp">{Math.round(daily[0].temp.day)}°C</p>
-          <h5>Buono</h5>
+          <p id="temp">{Math.round(temp.day)}°C</p>
+          <h5>{weather[0].main}</h5>
           <MaxMinStyles>
             <p>
-              <span>28°C</span>
+              <span>{temp.max}°C</span>
               Max
             </p>
             <p>
-              <span>22°C</span>Min
+              <span>{temp.min}°C</span>Min
             </p>
           </MaxMinStyles>
         </InnerCardStacking>
-      </CardContainer>
-    </OuterCardContainer>
+      </ForecastCardStyle>
   );
 };
 

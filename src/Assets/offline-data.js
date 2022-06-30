@@ -23,7 +23,7 @@ export const OFFLINE_DATA = {
   cod: 200,
 };
 
-export const DAILY_DATA = {
+export const DAILY_DATA = [{
   lat: 44.5589,
   lon: 54.3058,
   timezone: "Asia/Aqtau",
@@ -302,4 +302,4 @@ export const DAILY_DATA = {
       uvi: 9,
     },
   ],
-};
+}];
