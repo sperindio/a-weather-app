@@ -3,7 +3,7 @@ import {
   InnerCardStacking,
   MaxMinStyles,
 } from "../Main Card/main-card.styles";
-import { ForecastCardStyle } from "./forecast-card.styles";
+import { ForecastCardStyle, ForecastInnerCardStacking } from "./forecast-card.styles";
 import "../Main Card/main-card.styles-in-css.css";
 import { ReactComponent as WeatherIcon } from "../../Assets/icons/01d.svg";
 
@@ -12,10 +12,8 @@ const ForecastCard = ({ temp, weather, dt }) => {
   const timeStamp = dt*1000;
   const dateObject = new Date(timeStamp);
   const finalDay = [dateObject.toLocaleString("en-US", {weekday: "long"}), dateObject.toLocaleString("en-US", {day: "numeric"})]
-  console.log(finalDay);
   return (
-      <ForecastCardStyle>
-        <InnerCardStacking>
+        <ForecastInnerCardStacking>
           <h3>{finalDay[0] + "," + finalDay[1]}</h3>
           <WeatherIcon className="icon" />
           <p id="temp">{Math.round(temp.day)}°C</p>
@@ -29,8 +27,7 @@ const ForecastCard = ({ temp, weather, dt }) => {
               <span>{Math.round(temp.min)}°C</span>Min
             </p>
           </MaxMinStyles>
-        </InnerCardStacking>
-      </ForecastCardStyle>
+        </ForecastInnerCardStacking>
   );
 };
 
