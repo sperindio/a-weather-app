@@ -19,11 +19,11 @@ const MainCard = ({ name, main, weather }) => {
           <h5>{weather[0].main}</h5>
           <MaxMinStyles>
             <p>
-              <span>{main.temp_max}</span>
+              <span>{Math.round(main.temp_max)}°C</span>
               Max
             </p>
             <p>
-              <span>{main.temp_min}</span>Min
+              <span>{Math.round(main.temp_min)}°C</span>Min
             </p>
           </MaxMinStyles>
         </InnerCardStacking>

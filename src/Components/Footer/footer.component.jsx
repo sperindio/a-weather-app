@@ -1,5 +1,4 @@
 import React from "react";
-import "./footer.styles.css";
 import { FooterStyle, FooterSpan, LinkStyles } from "./footer.styles";
 
 const Footer = () => {

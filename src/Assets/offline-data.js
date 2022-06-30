@@ -23,6 +23,7 @@ export const OFFLINE_DATA = {
   cod: 200,
 };
 
+<<<<<<< HEAD
 export const DAILY_DATA = [
   {
     lat: 44.5589,
@@ -31,6 +32,35 @@ export const DAILY_DATA = [
     timezone_offset: 18000,
     current: {
       dt: 1654958246,
+=======
+export const DAILY_DATA = [{
+  lat: 44.5589,
+  lon: 54.3058,
+  timezone: "Asia/Aqtau",
+  timezone_offset: 18000,
+  current: {
+    dt: 1654958246,
+    sunrise: 1654907860,
+    sunset: 1654963636,
+    temp: 28.73,
+    feels_like: 27.26,
+    pressure: 1011,
+    humidity: 20,
+    dew_point: 3.57,
+    uvi: 0.22,
+    clouds: 1,
+    visibility: 10000,
+    wind_speed: 3.6,
+    wind_deg: 40,
+    wind_gust: 4.06,
+    weather: [
+      { id: 800, main: "Clear", description: "clear sky", icon: "01d" },
+    ],
+  },
+  daily: [
+    {
+      dt: 1654934400,
+>>>>>>> 370fcb0d773109cd02d16bdf557425affdf7451b
       sunrise: 1654907860,
       sunset: 1654963636,
       temp: 28.73,
@@ -273,6 +303,7 @@ export const DAILY_DATA = [
         rain: 2.58,
         uvi: 9,
       },
+<<<<<<< HEAD
       {
         dt: 1655539200,
         sunrise: 1655512639,
@@ -305,3 +336,21 @@ export const DAILY_DATA = [
     ],
   },
 ];
+=======
+      feels_like: { day: 27.96, night: 23.21, eve: 26.39, morn: 24.16 },
+      pressure: 1009,
+      humidity: 23,
+      dew_point: 6.16,
+      wind_speed: 10.03,
+      wind_deg: 310,
+      wind_gust: 11.79,
+      weather: [
+        { id: 800, main: "Clear", description: "clear sky", icon: "01d" },
+      ],
+      clouds: 0,
+      pop: 0,
+      uvi: 9,
+    },
+  ],
+}];
+>>>>>>> 370fcb0d773109cd02d16bdf557425affdf7451b
