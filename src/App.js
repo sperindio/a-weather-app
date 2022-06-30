@@ -29,9 +29,8 @@ function App() {
       <Header />
       {weatherData ? (
         <React.Fragment>
-          {console.log(dailyData)}
           <MainCard {...weatherData} />
-          <ForecastCard {...dailyData} />
+          {dailyData && dailyData.map((days) => <ForecastCard {...days} />)}
         </React.Fragment>
       ) : (
         //{dailyData.map((daydata.weather.daily.lenght()) => <MainCard {...daydata} />)}

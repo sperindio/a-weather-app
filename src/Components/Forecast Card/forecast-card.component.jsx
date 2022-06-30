@@ -16,7 +16,7 @@ const ForecastCard = ({ daily }) => {
           <h3>Giorno</h3>
           <WeatherIcon className="icon" />
           <p id="temp">{Math.round(daily[0].temp.day)}°C</p>
-          <h5>Buono</h5>
+          <h5>{daily[0].weather[0].main}</h5>
           <MaxMinStyles>
             <p>
               <span>28°C</span>
