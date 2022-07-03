@@ -3,8 +3,6 @@ import SearchForm from "./Components/Search-form.component/search-form.component
 import Header from "./Components/Header/header.component";
 import Footer from "./Components/Footer/footer.component";
 import { OFFLINE_DATA, DAILY_DATA } from "./Assets/offline-data";
-import MainCard from "./Components/Main Card/main-card.component";
-import ForecastCard from "./Components/Forecast Card/forecast-card.component";
 import WeatherPage from "./Pages/WeatherPage";
 import "./App.css";
 
@@ -29,14 +27,7 @@ function App() {
     <React.Fragment>
       <Header />
       {weatherData ? (
-<<<<<<< HEAD
-        <React.Fragment>
-          <MainCard {...weatherData} />
-          {dailyData && dailyData.map((days) => <ForecastCard {...days} />)}
-        </React.Fragment>
-=======
         <WeatherPage weatherData={weatherData} dailyData={dailyData} />
->>>>>>> 370fcb0d773109cd02d16bdf557425affdf7451b
       ) : (
         //{dailyData.map((daydata.weather.daily.lenght()) => <MainCard {...daydata} />)}
         <SearchForm

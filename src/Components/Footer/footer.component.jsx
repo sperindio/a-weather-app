@@ -1,17 +1,21 @@
 import React from "react";
-import { FooterStyle, FooterSpan, LinkStyles } from "./footer.styles";
+import {
+  FooterStyle,
+  FooterSpan,
+  LinkStyles,
+  InnerFooter,
+} from "./footer.styles";
 
 const Footer = () => {
   return (
     <FooterStyle>
-      <div>
+      <InnerFooter>
         <FooterSpan>App created by Alberto Sperindio</FooterSpan>
-      </div>
-      <div>
+
         <LinkStyles href="" target="_blank">
           GitHub
         </LinkStyles>
-      </div>
+      </InnerFooter>
     </FooterStyle>
   );
 };
