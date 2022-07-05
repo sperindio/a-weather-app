@@ -9,13 +9,12 @@ import {
 const Footer = () => {
   return (
     <FooterStyle>
-      <InnerFooter>
+    
         <FooterSpan>App created by Alberto Sperindio</FooterSpan>
-
         <LinkStyles href="" target="_blank">
           GitHub
         </LinkStyles>
-      </InnerFooter>
+      
     </FooterStyle>
   );
 };

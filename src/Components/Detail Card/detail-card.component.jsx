@@ -15,7 +15,7 @@ const DetailCards = ({ wind, main }) => {
       <DetailCardInner>
         <h5>Perception</h5>
         <FeelsIcon />
-        <h3>{main.feels_like}°C</h3>
+        <h3>{Math.round(main.feels_like)}°C</h3>
       </DetailCardInner>
       <DetailCardInner>
         <h5>Humidity</h5>
