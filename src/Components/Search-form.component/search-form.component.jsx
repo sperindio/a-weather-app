@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, SearchBar, SearchButton } from "./search.form.styles";
 
-const SearchForm = ({ searchText, handleChange, handleSubmit }) => {
+const SearchForm = ({ searchText, handleChange, handleSubmit, geo }) => {
   return (
     <Container>
       <form onSubmit={handleSubmit}>
@@ -11,7 +11,18 @@ const SearchForm = ({ searchText, handleChange, handleSubmit }) => {
           placeholder="Where?"
           onChange={handleChange}
         />
-        <SearchButton value="Search Now" type="submit" />
+        {geo ? (
+          <React.Fragment>
+            {console.log(geo)}
+            <ul>
+              {geo.map((location, index) => (
+                <SearchButton type="submit" key={index}>
+                  {location.name}, {location.state}, {location.country}
+                </SearchButton>
+              ))}
+            </ul>
+          </React.Fragment>
+        ) : null}
       </form>
     </Container>
   );

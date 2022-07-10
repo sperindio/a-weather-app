@@ -20,7 +20,7 @@ export const DetailCardOuter = styled.div`
 `;
 
 export const DetailCardInner = styled.div`
-  margin: auto 5px;
+  margin: auto auto;
   padding: auto 5px;
   width: 10vw;
   text-align: center;
@@ -29,6 +29,6 @@ export const DetailCardInner = styled.div`
   box-shadow: 0px 0px 5px white;
 
   * {
-    margin: 5px 50px;
+    margin: 5px 10px;
   }
 `;

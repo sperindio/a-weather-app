@@ -36,12 +36,11 @@ export const SearchBar = styled.input`
 `;
 
 export const SearchButton = styled(SearchBar)`
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 35px;
-  height: auto;
-  width: auto;
-  padding: 0.7em;
-  margin-left: 10px;
-  background: rgba(0, 0, 0, 0.3);
-  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  border: 0.5px solid rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  height: 35px;
+  width: 20vw;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+  color: black;
 `;

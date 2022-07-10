@@ -2,14 +2,20 @@ import React, { useState, useEffect } from "react";
 import SearchForm from "./Components/Search-form.component/search-form.component";
 import Header from "./Components/Header/header.component";
 import Footer from "./Components/Footer/footer.component";
-import { OFFLINE_DATA, DAILY_DATA } from "./Assets/offline-data";
+import getDecodingData from "./Utils/fetch-main-data";
+import { OFFLINE_DATA, DAILY_DATA, GEODECODING } from "./Assets/offline-data";
 import WeatherPage from "./Pages/WeatherPage";
 import "./App.css";
 
 function App() {
   const [searchText, setSearchText] = useState("");
   const [dailyData, setDailyData] = useState(DAILY_DATA);
-  const [weatherData, setWeatherData] = useState(OFFLINE_DATA);
+  const [weatherData, setWeatherData] = useState("");
+  const [geoDecoding, setGeoDecoding] = useState("");
+
+  useEffect(() => {
+    getDecodingData(searchText, setGeoDecoding, geoDecoding);
+  }, [searchText]);
 
   const handleChange = (e) => {
     setSearchText(e.target.value);
@@ -34,6 +40,7 @@ function App() {
           searchText={searchText}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
+          geo={geoDecoding}
         />
       )}
       <Footer />
