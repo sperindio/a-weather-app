@@ -11,15 +11,15 @@ function App() {
   const [searchText, setSearchText] = useState("");
   const [dailyData, setDailyData] = useState(DAILY_DATA);
   const [weatherData, setWeatherData] = useState("");
-  const [geoDecoding, setGeoDecoding] = useState("");
-
-  useEffect(() => {
-    getDecodingData(searchText, setGeoDecoding, geoDecoding);
-  }, [searchText]);
+  const [geoDecoding, setGeoDecoding] = useState([]);
 
   const handleChange = (e) => {
     setSearchText(e.target.value);
     console.log(searchText);
+    if (searchText.length > 1) {
+      getDecodingData(searchText, setGeoDecoding);
+    }
+    console.log(geoDecoding);
   };
 
   const handleSubmit = (event) => {

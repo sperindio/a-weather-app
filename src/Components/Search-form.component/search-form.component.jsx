@@ -11,18 +11,21 @@ const SearchForm = ({ searchText, handleChange, handleSubmit, geo }) => {
           placeholder="Where?"
           onChange={handleChange}
         />
-        {geo ? (
+
+        {geo.lenght > 0 && (
           <React.Fragment>
-            {console.log(geo)}
+            {console.log("This is the geo" + geo)}
             <ul>
-              {geo.map((location, index) => (
-                <SearchButton type="submit" key={index}>
-                  {location.name}, {location.state}, {location.country}
-                </SearchButton>
-              ))}
+              <SearchButton>
+                {geo[0].slice(0, 5).map((location, index) => (
+                  <li key={index}>
+                    {location.name}, {location.state}, {location.country}
+                  </li>
+                ))}
+              </SearchButton>
             </ul>
           </React.Fragment>
-        ) : null}
+        )}
       </form>
     </Container>
   );
