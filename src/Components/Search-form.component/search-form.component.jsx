@@ -2,6 +2,7 @@ import React from "react";
 import { Container, SearchBar, SearchButton, DynamicList } from "./search.form.styles";
 
 const SearchForm = ({ searchText, handleChange, handleSubmit, geo }) => {
+   
   return (
     <Container>
       <form onSubmit={handleSubmit}>
@@ -17,11 +18,11 @@ const SearchForm = ({ searchText, handleChange, handleSubmit, geo }) => {
             <DynamicList>
             <ul>
                 {geo.map((location, index) => (
-                  <SearchButton type="Submit">
-                  <li key={index}>
-                    {location.name}, {location.state}, {location.country}
-                  </li>
-            </SearchButton>
+                  <SearchButton type="Submit" value={location[index]}>
+                    <li key={index}>
+                      {location.name}, {location.state}, {location.country}
+                    </li>
+                  </SearchButton>
                 ))}
             </ul>
             </DynamicList>

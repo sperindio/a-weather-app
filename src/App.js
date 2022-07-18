@@ -3,7 +3,7 @@ import SearchForm from "./Components/Search-form.component/search-form.component
 import Header from "./Components/Header/header.component";
 import Footer from "./Components/Footer/footer.component";
 import getDecodingData from "./Utils/fetch-main-data";
-import { OFFLINE_DATA, DAILY_DATA, GEODECODING } from "./Assets/offline-data";
+import { OFFLINE_DATA, DAILY_DATA } from "./Assets/offline-data";
 import WeatherPage from "./Pages/WeatherPage";
 import "./App.css";
 
