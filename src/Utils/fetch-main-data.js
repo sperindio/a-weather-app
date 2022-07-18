@@ -7,7 +7,7 @@ const getDecodingData = async (searchText, setGeoDecoding) => {
     );
     const datas = await response.json();
     //console.log(datas);
-    setGeoDecoding(datas);
+    return setGeoDecoding(datas);
   } catch (error) {
     console.log(error);
   }

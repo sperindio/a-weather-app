@@ -35,12 +35,25 @@ export const SearchBar = styled.input`
   }
 `;
 
-export const SearchButton = styled(SearchBar)`
-  background: rgba(0, 0, 0, 0.2);
-  border: 0.5px solid rgba(0, 0, 0, 0.05);
-  border-radius: 5px;
-  height: 35px;
-  width: 20vw;
-  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
-  color: black;
+export const DynamicList = styled.div`
+background: rgba(0, 0, 0, 0.2);
+border: 0.5px solid rgba(0, 0, 0, 0.05);
+border-radius: 5px;
+box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+color: white;
+`;
+
+export const SearchButton = styled.button`
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  border: none;
+
+  li {
+    list-style-type: none;
+    margin: 2px auto;
+    padding: 0;
+  }
+
 `;

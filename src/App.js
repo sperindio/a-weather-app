@@ -15,12 +15,15 @@ function App() {
 
   const handleChange = (e) => {
     setSearchText(e.target.value);
-    console.log(searchText);
-    if (searchText.length > 1) {
+  };
+  
+  useEffect(() => {
+    //The API request will be triggered only after the second charcater
+    if (searchText.length > 2) {
       getDecodingData(searchText, setGeoDecoding);
     }
-    console.log(geoDecoding);
-  };
+    console.log(searchText);
+  }, [searchText])
 
   const handleSubmit = (event) => {
     console.log("This is the final state" + searchText);

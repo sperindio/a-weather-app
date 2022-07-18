@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, SearchBar, SearchButton } from "./search.form.styles";
+import { Container, SearchBar, SearchButton, DynamicList } from "./search.form.styles";
 
 const SearchForm = ({ searchText, handleChange, handleSubmit, geo }) => {
   return (
@@ -11,19 +11,20 @@ const SearchForm = ({ searchText, handleChange, handleSubmit, geo }) => {
           placeholder="Where?"
           onChange={handleChange}
         />
-
-        {geo.lenght > 0 && (
+        {geo[0] && (
           <React.Fragment>
-            {console.log("This is the geo" + geo)}
+            {console.log("This is the geo", geo)}
+            <DynamicList>
             <ul>
-              <SearchButton>
-                {geo[0].slice(0, 5).map((location, index) => (
+                {geo.map((location, index) => (
+                  <SearchButton type="Submit">
                   <li key={index}>
                     {location.name}, {location.state}, {location.country}
                   </li>
+            </SearchButton>
                 ))}
-              </SearchButton>
             </ul>
+            </DynamicList>
           </React.Fragment>
         )}
       </form>
