@@ -12,6 +12,7 @@ function App() {
   const [dailyData, setDailyData] = useState(DAILY_DATA);
   const [weatherData, setWeatherData] = useState("");
   const [geoDecoding, setGeoDecoding] = useState([]);
+  const [uniqueLocationData, setUniqueLocationData] = useState([]);
 
   const handleChange = (e) => {
     setSearchText(e.target.value);
@@ -25,11 +26,17 @@ function App() {
     console.log(searchText);
   }, [searchText])
 
+  const handleLocation = (local) => {
+    setUniqueLocationData(local);
+  };
+
   const handleSubmit = (event) => {
-    console.log("This is the final state" + searchText);
-    alert("A name was submitted: " + searchText);
-    setSearchText("");
     event.preventDefault();
+    console.log("This is the final state" + uniqueLocationData.name);
+    console.log(uniqueLocationData);
+    alert("A name was submitted: " + uniqueLocationData.name);
+    setSearchText("");
+    setGeoDecoding([])
   };
 
   return (
@@ -44,6 +51,7 @@ function App() {
           handleChange={handleChange}
           handleSubmit={handleSubmit}
           geo={geoDecoding}
+          handleLocation={handleLocation}
         />
       )}
       <Footer />
