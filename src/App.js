@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import SearchForm from "./Components/Search-form.component/search-form.component";
 import Header from "./Components/Header/header.component";
 import Footer from "./Components/Footer/footer.component";
-import getDecodingData from "./Utils/fetch-main-data";
+import { getDecodingData, getWeatherData } from "./Utils/fetch-main-data";
 import { OFFLINE_DATA, DAILY_DATA } from "./Assets/offline-data";
 import WeatherPage from "./Pages/WeatherPage";
 import "./App.css";
@@ -17,14 +17,14 @@ function App() {
   const handleChange = (e) => {
     setSearchText(e.target.value);
   };
-  
+
   useEffect(() => {
     //The API request will be triggered only after the second charcater
     if (searchText.length > 2) {
       getDecodingData(searchText, setGeoDecoding);
     }
     console.log(searchText);
-  }, [searchText])
+  }, [searchText]);
 
   const handleLocation = (local) => {
     setUniqueLocationData(local);
@@ -36,7 +36,10 @@ function App() {
     console.log(uniqueLocationData);
     alert("A name was submitted: " + uniqueLocationData.name);
     setSearchText("");
-    setGeoDecoding([])
+    let lat = uniqueLocationData.lat;
+    let lon = uniqueLocationData.lon;
+    getWeatherData(lat, lon, setWeatherData);
+    setGeoDecoding([]);
   };
 
   return (
