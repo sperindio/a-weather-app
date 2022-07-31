@@ -1,12 +1,20 @@
 import styled from "styled-components";
 
+export const OuterContainer = styled.div`
+  display: block;
+  height: 100vh;
+  width: 100%;
+`;
+
 export const Container = styled.div`
-  position: fixed;
+  position: absolute;
   text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  height: 200px;
+  width: 100%;
 `;
 
 export const SearchBar = styled.input`
@@ -36,11 +44,13 @@ export const SearchBar = styled.input`
 `;
 
 export const DynamicList = styled.div`
-background: rgba(0, 0, 0, 0.2);
-border: 0.5px solid rgba(0, 0, 0, 0.05);
-border-radius: 5px;
-box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
-color: white;
+  background: rgba(0, 0, 0, 0.2);
+  border: 0.5px solid rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+  color: white;
+  width: 20vw;
+  margin: auto;
 `;
 
 export const SearchButton = styled.button`
@@ -52,8 +62,7 @@ export const SearchButton = styled.button`
 
   li {
     list-style-type: none;
-    margin: 2px auto;
+    margin: 8px auto;
     padding: 0;
   }
-
 `;

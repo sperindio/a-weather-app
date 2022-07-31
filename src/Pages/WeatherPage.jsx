@@ -14,7 +14,7 @@ const WeatherPage = ({ weatherData, dailyData }) => {
       <DetailCardOuter>
         <DetailCards {...weatherData} />
       </DetailCardOuter>
-        <h2 style={{textAlign: "center"}}>Next days forecast</h2>
+      <h2 style={{ textAlign: "center" }}>Next days forecast</h2>
       <ForecastCardStyle>
         {dailyData[0].daily.slice(0, 5).map((dailies, index) => (
           <ForecastCard key={index} {...dailies} />

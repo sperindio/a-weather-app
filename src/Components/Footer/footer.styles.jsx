@@ -1,6 +1,11 @@
 import styled from "styled-components";
 
 export const FooterStyle = styled.div`
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  height: 100px;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -13,10 +18,6 @@ export const FooterStyle = styled.div`
     rgba(0, 0, 0, 0) 100%
   );
   color: white;
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  height: 100px;
 `;
 
 export const FooterSpan = styled.span`
