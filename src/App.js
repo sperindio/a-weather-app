@@ -24,20 +24,24 @@ function App() {
       getDecodingData(searchText, setGeoDecoding);
     }
     console.log(searchText);
+    console.log(geoDecoding.results);
   }, [searchText]);
 
   const handleLocation = (local) => {
     setUniqueLocationData(local);
+    console.log("Unique location", uniqueLocationData);
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("This is the final state" + uniqueLocationData.name);
+    /*     console.log(
+      "This is the final state" + uniqueLocationData.address.municipality
+    );
     console.log(uniqueLocationData);
-    alert("A name was submitted: " + uniqueLocationData.name);
+ */ alert("A name was submitted: " + uniqueLocationData.address.municipality);
     setSearchText("");
-    let lat = uniqueLocationData.lat;
-    let lon = uniqueLocationData.lon;
+    let lat = uniqueLocationData.position.lat;
+    let lon = uniqueLocationData.position.lon;
     getWeatherData(lat, lon, setWeatherData);
     setGeoDecoding([]);
   };
@@ -53,7 +57,7 @@ function App() {
           searchText={searchText}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
-          geo={geoDecoding}
+          results={geoDecoding.results}
           handleLocation={handleLocation}
         />
       )}
