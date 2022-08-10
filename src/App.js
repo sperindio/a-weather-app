@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import SearchForm from "./Components/Search-form.component/search-form.component";
+import { SearchForm } from "./Components/Search-form.component/search-form.component";
 import Header from "./Components/Header/header.component";
 import Footer from "./Components/Footer/footer.component";
 import { getDecodingData, getWeatherData } from "./Utils/fetch-main-data";
@@ -50,7 +50,16 @@ function App() {
     <React.Fragment>
       <Header />
       {weatherData ? (
-        <WeatherPage weatherData={weatherData} dailyData={dailyData} />
+        <React.Fragment>
+          <WeatherPage weatherData={weatherData} dailyData={dailyData} />
+          <SearchForm
+            searchText={searchText}
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+            results={geoDecoding.results}
+            handleLocation={handleLocation}
+          />
+        </React.Fragment>
       ) : (
         //{dailyData.map((daydata.weather.daily.lenght()) => <MainCard {...daydata} />)}
         <SearchForm

@@ -66,3 +66,11 @@ export const SearchButton = styled.button`
     padding: 0;
   }
 `;
+
+export const TopOuterContainer = styled(OuterContainer)`
+  &:hover {
+    display: block;
+    height: 100vh;
+    width: 100%;
+  }
+`;
