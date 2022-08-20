@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { SearchForm } from "./Components/Search-form.component/search-form.component";
-import Header from "./Components/Header/header.component";
+import FirstHeader from "./Components/Header/header.component";
 import Footer from "./Components/Footer/footer.component";
 import { getDecodingData, getWeatherData } from "./Utils/fetch-main-data";
+import SecondHeader from "./Components/Header/second-header.component";
 import { OFFLINE_DATA, DAILY_DATA } from "./Assets/offline-data";
 import WeatherPage from "./Pages/WeatherPage";
+//Styles
 import "./App.css";
 
 function App() {
@@ -48,10 +50,21 @@ function App() {
 
   return (
     <React.Fragment>
-      <Header />
       {weatherData ? (
         <React.Fragment>
+          <SecondHeader
+            searchText={searchText}
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+            results={geoDecoding.results}
+            handleLocation={handleLocation}
+          />
           <WeatherPage weatherData={weatherData} dailyData={dailyData} />
+        </React.Fragment>
+      ) : (
+        //{dailyData.map((daydata.weather.daily.lenght()) => <MainCard {...daydata} />)}
+        <React.Fragment>
+          <FirstHeader />
           <SearchForm
             searchText={searchText}
             handleChange={handleChange}
@@ -60,15 +73,6 @@ function App() {
             handleLocation={handleLocation}
           />
         </React.Fragment>
-      ) : (
-        //{dailyData.map((daydata.weather.daily.lenght()) => <MainCard {...daydata} />)}
-        <SearchForm
-          searchText={searchText}
-          handleChange={handleChange}
-          handleSubmit={handleSubmit}
-          results={geoDecoding.results}
-          handleLocation={handleLocation}
-        />
       )}
       <Footer />
     </React.Fragment>

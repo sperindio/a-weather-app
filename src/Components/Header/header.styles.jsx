@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const HeaderStyles = styled.div`
   display: flex;
+  flex-direction: row;
   justify-content: center;
   font-size: 18px;
   background: rgb(0, 0, 0);

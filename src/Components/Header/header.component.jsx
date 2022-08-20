@@ -1,7 +1,7 @@
 import React from "react";
 import { HeaderStyles } from "./header.styles";
 
-const Header = () => {
+const FirstHeader = () => {
   return (
     <HeaderStyles>
       <h1>A Weather App</h1>
@@ -9,4 +9,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default FirstHeader;
