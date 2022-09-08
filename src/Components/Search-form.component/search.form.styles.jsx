@@ -52,6 +52,17 @@ export const DynamicList = styled.div`
   width: 20vw;
   margin: auto;
 `;
+export const DynamicListSecond = styled.div`
+  position: absolute;
+  top: 5vw;
+  background: rgba(0, 0, 0, 0.2);
+  border: 0.5px solid rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.1);
+  color: white;
+  width: 20vw;
+  margin: 10px auto;
+`;
 
 export const SearchButton = styled.button`
   display: flex;
@@ -85,8 +96,8 @@ export const SearchLine = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   background: crimson;
   border-radius: 50%;
   transition: all 1s;

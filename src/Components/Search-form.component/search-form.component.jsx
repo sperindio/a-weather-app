@@ -8,6 +8,7 @@ import {
   SearchButton,
   DynamicList,
   OuterContainer,
+  DynamicListSecond,
 } from "./search.form.styles";
 
 export const SearchForm = ({
@@ -75,7 +76,7 @@ export const SearchFormOnTop = ({
         {results && (
           <React.Fragment>
             {console.log("This is the geo ", results[0])}
-            <DynamicList>
+            <DynamicListSecond>
               <ul>
                 {results.map((location) => (
                   <SearchButton
@@ -91,7 +92,7 @@ export const SearchFormOnTop = ({
                   </SearchButton>
                 ))}
               </ul>
-            </DynamicList>
+            </DynamicListSecond>
           </React.Fragment>
         )}
       </form>
